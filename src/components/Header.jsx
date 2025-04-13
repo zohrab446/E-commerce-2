@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../css/Header.css';
-import '../css/Product.css';
 import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
@@ -8,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDrawer } from '../redux/slices/basketSlice';
-
 
 
 
@@ -24,11 +22,9 @@ function Header() {
     const { products } = useSelector((store) => store.basket);
     const changeTheme = () => {
         const root = document.getElementById("root");
-        const card = document.getElements("card")
         if (theme) {
             root.style.backgroundColor = "black";
             root.style.color = "#fff";
-            card.style.color = "black"
         } else {
             root.style.backgroundColor = "#fff";
             root.style.color = "black";
